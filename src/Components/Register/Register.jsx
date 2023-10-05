@@ -3,6 +3,7 @@ import auth from "../../FireBase-Config/firebase.config";
 import { useState } from "react";
 
 import { FaEye , FaEyeSlash } from 'react-icons/fa';
+import { Link } from "react-router-dom";
 
 
 /**
@@ -126,6 +127,7 @@ name="password" id='' required />
                 {
                     success && <p className="text-green-700"> {success} </p>
                 }
+                <p> Already have an Account ? Please <Link to='/login'> Login </Link> </p>
             </div>
         </div>
     );
