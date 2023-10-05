@@ -32,7 +32,7 @@ const Register = () => {
 
     const handleRegister = e => {
         e.preventDefault();
-        // console.log('sibmit')
+        // console.log('submit')
 
         const email = e.target.email.value ;
         const password = e.target.password.value ;
