@@ -36,7 +36,9 @@ const Register = () => {
 
         const email = e.target.email.value ;
         const password = e.target.password.value ;
-        console.log(email , password);
+        const Accepted = e.target.check.checked;
+
+        console.log(email , password , Accepted);
 
         // reset error
 
@@ -53,6 +55,10 @@ const Register = () => {
             setRegisterError('password should have atleast one uppercase')
             return;
 
+        }
+        else if(!Accepted){
+            setRegisterError('please accept our terms and conditions')
+            return;
         }
 
         
@@ -93,6 +99,14 @@ name="password" id='' required />
 
  </span>
                    </div>
+                    <br />
+
+                    <div className="mb-2">
+                        <input type="checkbox" name="check" id="" />
+                        <label className="ml-2" htmlFor="check"> Accept our <a href=""> Terms and conditions </a> </label>
+                    </div>
+
+
                     <br />
 
                     <input className="btn btn-primary mb-4 w-full" type="submit" name="Register" id='' />
